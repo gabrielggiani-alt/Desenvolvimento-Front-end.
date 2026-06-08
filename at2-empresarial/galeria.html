@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria — Doce Encanto Confeitaria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Parisienne&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ceu"></div>
+  <div class="blobs"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+
+  <header class="hero hero-galeria compacto">
+    <div class="foto"></div>
+    <a href="index.html" class="brand">
+      <span class="marca">Doce Encanto</span>
+      <span class="sub">Confeitaria Artesanal</span>
+    </a>
+    <div class="hero-inner">
+      <span class="eyebrow">Nossos trabalhos</span>
+      <h1 class="script" style="font-size:clamp(3rem,9vw,6rem);">Galeria de delícias</h1>
+      <p class="lead">Um pouquinho do que já saiu da nossa cozinha. Clique nas fotos para ampliar.</p>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">Doce Encanto</a>
+      <button class="nav-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="galeria.html" class="ativo">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="filtros reveal">
+          <button class="filtro ativo" data-cat="todos">Todos</button>
+          <button class="filtro" data-cat="aniversario">Aniversário</button>
+          <button class="filtro" data-cat="infantil">Infantil</button>
+          <button class="filtro" data-cat="doces">Doces</button>
+        </div>
+        <div class="galeria-grid reveal">
+          <div class="item" data-cat="aniversario"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" alt="Bolo de aniversário decorado"></div>
+          <div class="item" data-cat="doces"><img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?auto=format&fit=crop&w=600&q=80" alt="Doces finos"></div>
+          <div class="item" data-cat="infantil"><img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=600&q=80" alt="Bolo infantil colorido"></div>
+          <div class="item" data-cat="aniversario"><img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=600&q=80" alt="Bolo elegante"></div>
+          <div class="item" data-cat="doces"><img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=600&q=80" alt="Cupcakes decorados"></div>
+          <div class="item" data-cat="infantil"><img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=600&q=80" alt="Bolo temático infantil"></div>
+          <div class="item" data-cat="aniversario"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" alt="Bolo de festa"></div>
+          <div class="item" data-cat="doces"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80" alt="Sobremesa no pote"></div>
+          <div class="item" data-cat="doces"><img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=600&q=80" alt="Macarons coloridos"></div>
+          <div class="item" data-cat="infantil"><img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=80" alt="Doces de festa infantil"></div>
+          <div class="item" data-cat="aniversario"><img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=600&q=80" alt="Bolo com velas"></div>
+          <div class="item" data-cat="doces"><img src="https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=600&q=80" alt="Brigadeiros gourmet"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="faixa-cta reveal">
+          <span class="script">gostou do que viu?</span>
+          <h2>Vamos criar o seu também</h2>
+          <p>Cada trabalho acima foi feito com carinho. O próximo pode ser o seu.</p>
+          <a href="contato.html" class="btn">Fazer encomenda <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox">
+    <button class="fechar" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+    <button class="nav-lb prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+    <img src="" alt="Imagem ampliada">
+    <button class="nav-lb next" aria-label="Próxima"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <footer class="rodape">
+    <div class="container">
+      <div>
+        <span class="marca">Doce Encanto</span>
+        <p style="margin-top:0.6rem;">Confeitaria artesanal em Riacho Fundo II, Brasília — DF. Bolos e doces feitos sob encomenda, com amor e capricho.</p>
+        <div class="rodape-social">
+          <a href="https://www.instagram.com/doceencanto_andreia" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/5561993011184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Páginas</h4>
+        <p><a href="index.html">Início</a></p>
+        <p><a href="sobre.html">Sobre</a></p>
+        <p><a href="cardapio.html">Cardápio</a></p>
+        <p><a href="galeria.html">Galeria</a></p>
+        <p><a href="contato.html">Contato</a></p>
+      </div>
+      <div>
+        <h4>Trabalho acadêmico</h4>
+        <p>Gabriel Gomes Giani</p>
+        <p>Paulo Henrique</p>
+        <p style="margin-top:0.8rem;">UCB — Universidade Católica de Brasília</p>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <p>© 2026 Doce Encanto · Site criado como projeto acadêmico de Desenvolvimento Front-end — UCB.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

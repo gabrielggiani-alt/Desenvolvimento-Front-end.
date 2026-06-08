@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Doce Encanto Confeitaria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Parisienne&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ceu"></div>
+  <div class="blobs"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+
+  <header class="hero hero-contato compacto">
+    <div class="foto"></div>
+    <a href="index.html" class="brand">
+      <span class="marca">Doce Encanto</span>
+      <span class="sub">Confeitaria Artesanal</span>
+    </a>
+    <div class="hero-inner">
+      <span class="eyebrow">Vamos adoçar seu dia</span>
+      <h1 class="script" style="font-size:clamp(3rem,9vw,6rem);">Faça sua encomenda</h1>
+      <p class="lead">Preencha o formulário ou chame direto no WhatsApp. A gente responde com todo carinho.</p>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-brand">Doce Encanto</a>
+      <button class="nav-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html" class="ativo">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <div class="container contato-grid">
+        <div class="form-card reveal">
+          <h2 style="font-size:1.8rem;margin-bottom:1.4rem;">Conte o que você imagina</h2>
+          <form>
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="campo">
+              <label for="wpp">WhatsApp</label>
+              <input type="tel" id="wpp" name="wpp" placeholder="(61) 90000-0000" required>
+            </div>
+            <div class="campo">
+              <label for="data">Data do evento</label>
+              <input type="date" id="data" name="data">
+            </div>
+            <div class="campo">
+              <label for="tipo">Tipo de produto</label>
+              <select id="tipo" name="tipo">
+                <option>Bolo decorado</option>
+                <option>Bolo simples</option>
+                <option>Doces finos</option>
+                <option>Sobremesa no pote</option>
+                <option>Kit festa</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="msg">Mensagem</label>
+              <textarea id="msg" name="msg" placeholder="Conte o tema, sabores, quantidade de pessoas..."></textarea>
+            </div>
+            <button type="submit" class="btn" style="width:100%;justify-content:center;">Enviar pedido <i class="fa-solid fa-paper-plane"></i></button>
+            <p class="form-msg" style="display:none;margin-top:1rem;color:var(--vinho);font-weight:500;text-align:center;">Pedido enviado com carinho! 💕 Em breve entraremos em contato.</p>
+          </form>
+        </div>
+
+        <div class="info-card reveal" data-delay="1">
+          <h2 style="font-size:1.8rem;margin-bottom:1.6rem;">Fale com a gente</h2>
+          <div class="info-linha">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><h4>WhatsApp</h4><p><a href="https://wa.me/5561993011184" target="_blank" rel="noopener">(61) 99301-1184</a></p></div>
+          </div>
+          <div class="info-linha">
+            <i class="fa-brands fa-instagram"></i>
+            <div><h4>Instagram</h4><p><a href="https://www.instagram.com/doceencanto_andreia" target="_blank" rel="noopener">@doceencanto_andreia</a></p></div>
+          </div>
+          <div class="info-linha">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><h4>Endereço</h4><p>QN 24 Cj. 2, Lotes 1 e 2<br>Riacho Fundo II, Brasília — DF</p></div>
+          </div>
+          <div class="info-linha">
+            <i class="fa-solid fa-clock"></i>
+            <div><h4>Encomendas</h4><p>Faça seu pedido com antecedência<br>para garantir a data desejada.</p></div>
+          </div>
+          <a href="https://wa.me/5561993011184" target="_blank" rel="noopener" class="btn wpp" style="width:100%;justify-content:center;margin-top:0.5rem;"><i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="mapa reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Riacho+Fundo+II,+Bras%C3%ADlia+-+DF&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Doce Encanto"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div>
+        <span class="marca">Doce Encanto</span>
+        <p style="margin-top:0.6rem;">Confeitaria artesanal em Riacho Fundo II, Brasília — DF. Bolos e doces feitos sob encomenda, com amor e capricho.</p>
+        <div class="rodape-social">
+          <a href="https://www.instagram.com/doceencanto_andreia" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/5561993011184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Páginas</h4>
+        <p><a href="index.html">Início</a></p>
+        <p><a href="sobre.html">Sobre</a></p>
+        <p><a href="cardapio.html">Cardápio</a></p>
+        <p><a href="galeria.html">Galeria</a></p>
+        <p><a href="contato.html">Contato</a></p>
+      </div>
+      <div>
+        <h4>Trabalho acadêmico</h4>
+        <p>Gabriel Gomes Giani</p>
+        <p>Paulo Henrique</p>
+        <p style="margin-top:0.8rem;">UCB — Universidade Católica de Brasília</p>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <p>© 2026 Doce Encanto · Site criado como projeto acadêmico de Desenvolvimento Front-end — UCB.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
