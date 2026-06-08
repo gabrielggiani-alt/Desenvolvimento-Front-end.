@@ -8,16 +8,16 @@ Responsive, hand-coded front-end projects built with **HTML5, CSS3, and vanilla 
 
 ---
 
-### 🍰 [Doce Encanto — Artisan Bakery](doce-encanto-confeitaria/)
+### [Doce Encanto — Artisan Bakery](doce-encanto-confeitaria/)
 5-page bakery site with an animated gradient background, glassmorphism UI, a filterable gallery with custom lightbox, and a static contact form with map.
 
-### 🥋 [World Karate Day](dia-mundial-karate/)
+### [World Karate Day](dia-mundial-karate/)
 Editorial, Japanese-inspired landing page with a kanji-driven layout, animated hero, scroll reveals, and a vertical timeline.
 
-### 🎨 [World Art Day](dia-mundial-arte/)
+### [World Art Day](dia-mundial-arte/)
 Single-page site on notable artists and Brazilian art history, with smooth-scroll navigation and an artist cards grid.
 
-### 🌱 [Soil Conservation Day](dia-conservacao-solo/)
+### [Soil Conservation Day](dia-conservacao-solo/)
 Multi-page informational site with a clean layout, navbar, and content cards.
 
 ---
