@@ -1,6 +1,11 @@
-# projeto do Paulo (entregue separado, não vai no meu repositório)
-at1-paulo-cafe/
-
-# sistema
+# OS files
 Thumbs.db
 .DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Local notes & tooling
+CLAUDE.md
+at1-paulo-cafe/
