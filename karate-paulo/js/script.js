@@ -1,5 +1,5 @@
-const toggle = document.querySelector('.nav-toggle');
-const menu = document.querySelector('.nav ul');
+const toggle = document.querySelector('.side-toggle');
+const menu = document.querySelector('.side-nav');
 
 if (toggle) {
   toggle.addEventListener('click', () => {
@@ -13,11 +13,6 @@ if (toggle) {
     });
   });
 }
-
-const nav = document.querySelector('.nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('rolou', window.scrollY > 40);
-});
 
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
