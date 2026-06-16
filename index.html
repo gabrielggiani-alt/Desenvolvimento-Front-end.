@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Gomes Giani — Front-End Projects</title>
+  <meta name="description" content="Responsive, hand-coded front-end projects built with HTML, CSS and vanilla JavaScript by Gabriel Gomes Giani." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #f1ece0;
+      --paper-2: #e8e1d1;
+      --ink: #1a1815;
+      --ink-soft: #5b5447;
+      --accent: #d63a1c;
+      --line: rgba(26, 24, 21, 0.14);
+      --display: "Fraunces", Georgia, serif;
+      --body: "Hanken Grotesk", system-ui, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--body);
+      background-color: var(--paper);
+      color: var(--ink);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* grain + warm vignette atmosphere */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+      opacity: 0.05;
+      mix-blend-mode: multiply;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(120% 80% at 80% -10%, rgba(214, 58, 28, 0.10), transparent 55%),
+        radial-gradient(90% 70% at -10% 110%, rgba(26, 24, 21, 0.08), transparent 50%);
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 2;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 7vw;
+    }
+
+    /* ---------- masthead ---------- */
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 34px 0 28px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .masthead .mark {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+    .masthead .mark b { color: var(--accent); }
+    .masthead a { color: inherit; text-decoration: none; transition: color 0.25s; }
+    .masthead a:hover { color: var(--accent); }
+
+    /* ---------- hero ---------- */
+    .hero { padding: clamp(60px, 12vw, 130px) 0 clamp(48px, 8vw, 96px); }
+    .eyebrow {
+      font-size: 0.74rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 26px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .hero h1 {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: clamp(3.2rem, 12vw, 9.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      font-variation-settings: "opsz" 144;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--accent);
+    }
+    .hero .lede {
+      max-width: 46ch;
+      margin-top: 36px;
+      font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+      color: var(--ink-soft);
+      line-height: 1.45;
+    }
+    .hero .lede b { color: var(--ink); font-weight: 700; }
+
+    /* ---------- index list ---------- */
+    .index-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--ink);
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .projects { list-style: none; }
+
+    .project a {
+      display: grid;
+      grid-template-columns: 90px 1fr auto;
+      align-items: center;
+      gap: 28px;
+      padding: 38px 0;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--ink);
+      position: relative;
+      transition: padding 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .project a::before {
+      content: "";
+      position: absolute;
+      inset: 0 -7vw;
+      background: var(--ink);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: -1;
+    }
+    .project a:hover { padding-left: 28px; padding-right: 28px; color: var(--paper); }
+    .project a:hover::before { transform: scaleY(1); }
+
+    .project .num {
+      font-family: var(--display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent);
+      font-feature-settings: "tnum";
+    }
+    .project .body .name {
+      font-family: var(--display);
+      font-size: clamp(1.7rem, 4.4vw, 2.9rem);
+      font-weight: 600;
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+      display: block;
+    }
+    .project a:hover .body .name { font-style: italic; }
+    .project .body .desc {
+      margin-top: 8px;
+      max-width: 54ch;
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+      transition: color 0.35s;
+    }
+    .project a:hover .body .desc { color: rgba(241, 236, 224, 0.72); }
+    .project .tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: color 0.35s;
+    }
+    .project a:hover .tag { color: rgba(241, 236, 224, 0.6); }
+    .project .arrow {
+      font-family: var(--display);
+      font-size: 1.5rem;
+      transform: translateX(-6px) rotate(0deg);
+      opacity: 0;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s;
+    }
+    .project a:hover .arrow { opacity: 1; transform: translateX(0) rotate(0deg); color: var(--accent); }
+
+    /* ---------- footer ---------- */
+    footer {
+      margin-top: clamp(80px, 14vw, 150px);
+      padding: 46px 0 60px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 40px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+    }
+    footer .stack { font-family: var(--display); font-style: italic; font-size: 1rem; color: var(--ink); }
+    footer a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ---------- reveal animation ---------- */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal.d1 { transition-delay: 0.08s; }
+    .reveal.d2 { transition-delay: 0.16s; }
+    .reveal.d3 { transition-delay: 0.24s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    @media (max-width: 680px) {
+      .project a { grid-template-columns: 54px 1fr; gap: 16px 18px; }
+      .project .tag { grid-column: 2; }
+      .project .arrow { display: none; }
+      .masthead { font-size: 0.62rem; letter-spacing: 0.14em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="masthead">
+      <span class="mark">GGG<b>.</b></span>
+      <nav>
+        <a href="https://github.com/gabrielggiani-alt" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow reveal">Portfolio — Brasília, BR</p>
+      <h1 class="reveal d1">Front&#8209;End<br /><em>Projects</em></h1>
+      <p class="lede reveal d2">Responsive, <b>hand-coded</b> sites built with HTML, CSS and vanilla JavaScript — no frameworks. Each one is its own small visual world.</p>
+    </section>
+
+    <section class="index">
+      <div class="index-head reveal">
+        <span>Selected work</span>
+        <span>2024 — 2025</span>
+      </div>
+
+      <ol class="projects">
+        <li class="project reveal">
+          <a href="doce-encanto-confeitaria/">
+            <span class="num">01</span>
+            <span class="body">
+              <span class="name">Doce Encanto</span>
+              <span class="desc">Five-page artisan bakery with an animated gradient backdrop, glassmorphism UI, a filterable gallery and a custom lightbox.</span>
+            </span>
+            <span class="tag">Bakery · 5 pages <span class="arrow">→</span></span>
+          </a>
+        </li>
+
+        <li class="project reveal">
+          <a href="dia-mundial-karate/">
+            <span class="num">02</span>
+            <span class="body">
+              <span class="name">World Karate Day</span>
+              <span class="desc">Editorial, Japanese-inspired landing with a kanji-driven layout, an animated hero and a vertical timeline.</span>
+            </span>
+            <span class="tag">Editorial · 3 pages <span class="arrow">→</span></span>
+          </a>
+        </li>
+
+        <li class="project reveal">
+          <a href="dia-mundial-arte/">
+            <span class="num">03</span>
+            <span class="body">
+              <span class="name">World Art Day</span>
+              <span class="desc">Single-page tribute to notable artists and Brazilian art history, with smooth-scroll navigation and an artist-cards grid.</span>
+            </span>
+            <span class="tag">Single page <span class="arrow">→</span></span>
+          </a>
+        </li>
+
+        <li class="project reveal">
+          <a href="dia-conservacao-solo/">
+            <span class="num">04</span>
+            <span class="body">
+              <span class="name">Soil Conservation Day</span>
+              <span class="desc">Clean multi-page informational site with a fixed navbar and structured content cards.</span>
+            </span>
+            <span class="tag">Informational · 3 pages <span class="arrow">→</span></span>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <span class="stack">Hand-coded — HTML · CSS · JavaScript</span>
+      <span>Gabriel Gomes Giani · <a href="https://github.com/gabrielggiani-alt" target="_blank" rel="noopener">@gabrielggiani-alt</a></span>
+    </footer>
+  </div>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>
