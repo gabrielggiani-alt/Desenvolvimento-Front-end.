@@ -20,6 +20,9 @@ Single-page site on notable artists and Brazilian art history, with smooth-scrol
 ### [Soil Conservation Day](dia-conservacao-solo/)
 Multi-page informational site with a clean layout, navbar, and content cards.
 
+### [Pudim](pudim/)
+Responsive reinterpretation of pudim.com.br, a landmark of the Brazilian web — full-screen photo, the story behind the site, the classic recipe, and share links.
+
 ---
 
 Each project is fully static — open its `index.html` in the browser to view.
