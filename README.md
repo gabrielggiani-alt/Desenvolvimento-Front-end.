@@ -21,7 +21,7 @@ Single-page site on notable artists and Brazilian art history, with smooth-scrol
 Multi-page informational site with a clean layout, navbar, and content cards.
 
 ### [Pudim](pudim/)
-Responsive reinterpretation of pudim.com.br, a landmark of the Brazilian web — full-screen photo, the story behind the site, the classic recipe, and share links.
+Responsive reinterpretation of pudim.com.br, a landmark of the Brazilian web — full-screen photo, the story behind the site, curiosities about the dessert, the classic recipe, and share links.
 
 ---
 

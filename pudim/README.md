@@ -1,8 +1,8 @@
 # Pudim
 
 Modern, responsive reinterpretation of [pudim.com.br](https://pudim.com.br), one of the best-known pages
-of the Brazilian web. Single scrolling page: full-screen photo, the story behind the site, the classic
-recipe, contact and share links.
+of the Brazilian web. Single scrolling page: full-screen photo, the story behind the site, curiosities
+about the dessert itself, the classic recipe, contact and share links.
 
 Built with HTML5 and CSS3 — no framework, no build step. Open `index.html` in the browser.
 
