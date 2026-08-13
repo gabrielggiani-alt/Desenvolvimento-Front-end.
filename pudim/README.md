@@ -23,4 +23,4 @@ _(to be added)_
 ## Credits
 
 Tribute to the original [pudim.com.br](https://pudim.com.br), non-commercial.
-The address shown on the contact section is not a working mailbox.
+The contact address uses the reserved `.example` TLD, so it can never receive mail.

@@ -260,8 +260,6 @@ h1, h2 {
 }
 .mail-btn:hover { background: var(--creme); color: var(--marrom); }
 
-.fineprint { margin: 14px 0 0; font-size: 13px; color: rgba(255, 248, 238, 0.45); }
-
 .share {
   padding: clamp(24px, 3vw, 36px);
   border-radius: 24px;
