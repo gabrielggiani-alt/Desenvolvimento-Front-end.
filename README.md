@@ -23,6 +23,9 @@ Multi-page informational site with a clean layout, navbar, and content cards.
 ### [Pudim](pudim/)
 Responsive reinterpretation of pudim.com.br, a landmark of the Brazilian web — full-screen photo, the story behind the site, curiosities about the dessert, the classic recipe, and share links.
 
+### [Interactive DOM Page](dom-interativo/)
+Page built around DOM manipulation: click counter with a floor at zero, paragraphs created from keyboard input, live character count that ignores spaces, and generated ordered or unordered lists.
+
 ---
 
 Each project is fully static — open its `index.html` in the browser to view.
